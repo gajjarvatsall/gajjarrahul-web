@@ -21,10 +21,35 @@
             text-shadow: 2px 2px 8px #000000;
             padding-bottom: 5.25rem;
         }
-        
-        .w-100{
-            width: 186% !important;
+
+        @media only screen and (min-width : 1224px) {
+            .slides {
+                width: 50% !important;
+            }
+            .slides2 {
+                width: 50% !important;
+            }
+            .con{
+                display: inline-flex;
+            }
+            .h-100 {
+                height: 50% !important;
+            }
         }
+        @media only screen and (max-width : 320px) {
+            .w-100 {
+                width: 186% !important;
+            }
+            .slides2 {
+                display: none!important;
+            }
+
+        }
+        
+
+        /* .w-100{
+            width: 200% !important;
+        } */
 
         .h-auto {
             height: 7%;
@@ -50,17 +75,31 @@
             height: 100%;
             overflow: hidden;
         }
+        .slides2 {
+            display: inline-flex;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
         .carousel d-md {
             height: 50%;
         }
 
-        #carouselExampleControls {
+        #carouselExampleControls1 {
+            height: 100%;
+            width: 100%;
+        }
+        #carouselExampleControls2 {
             height: 100%;
             width: 100%;
         }
 
-        #carouselExampleCaptions {
+        #carouselExampleCaptions3 {
+            height: 100%;
+            width: 100%;
+        }
+        #carouselExampleCaptions4 {
             height: 100%;
             width: 100%;
         }
@@ -152,11 +191,12 @@
     <main>
         <br>
         <br>
+        <div class="con">
         <div class="slides">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
 
-                    <div class="carousel-item d-sm d-lg d-md active">
+                    <div class="carousel-item row-cols-md-3 d-sm d-lg d-md active">
 
                         <img src="cover1.jpeg" class="d-block w-100 h-100" alt="...">
                     </div>
@@ -187,7 +227,49 @@
                     <div class="carousel-item">
                         <img src="cover10.jpeg" class="d-block w-100 h-100" alt="...">
                     </div>
-                    <div class="carousel-item">
+                    
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <div class="carousel-caption d-md-block d-flex justify-content-center">
+                    <h3><a href="https://www.instagram.com/gajjarrahul/?hl=en" target="_blank">Photos</a></h3>
+                </div>
+            </div>
+            <br>
+            <div id="carouselExampleCaptions3" class="carousel slide" width="100%" height="100%" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> -->
+                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                </div>
+                <div class="carousel-inner carousel d-md">
+                    <div class="carousel-item active ">
+                        <video class="video-fluid d-block w-100 h-100" autoplay loop muted>
+                            <source src="/corvid.mp4" type="video/mp4" />
+                        </video>
+                        <!-- <img src="/cover1.jpg" class="d-block w-100" alt="..."> -->
+                        <div class="carousel-caption d-md-block d-flex justify-content-center">
+                            <h3><a href="https://www.youtube.com/user/gajjarkt" target="_blank">Videos</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slides2">
+            <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item row-cols-md-3 d-sm d-lg d-md active">
+
                         <img src="cover11.jpeg" class="d-block w-100 h-100" alt="...">
                     </div>
                     <div class="carousel-item">
@@ -222,12 +304,12 @@
                     </div>
 
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
@@ -237,7 +319,7 @@
                 </div>
             </div>
             <br>
-            <div id="carouselExampleCaptions" class="carousel slide" width="100%" height="100%" data-bs-ride="carousel">
+            <div id="carouselExampleCaptions4" class="carousel slide" width="100%" height="100%" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> -->
                     <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -246,7 +328,7 @@
                 <div class="carousel-inner carousel d-md">
                     <div class="carousel-item active ">
                         <video class="video-fluid d-block w-100 h-100" autoplay loop muted>
-                            <source src="corvid.mp4" type="video/mp4" />
+                            <source src="corvid2.mp4" type="video/mp4" />
                         </video>
                         <!-- <img src="/cover1.jpg" class="d-block w-100" alt="..."> -->
                         <div class="carousel-caption d-md-block d-flex justify-content-center">
@@ -256,21 +338,23 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+
+
         </div>
     </main>
     <footer class="foot d-flex flex-wrap justify-content-center align-items-center my-4 fixed-bottom">
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/user/gajjarkt"><img src="youtube.svg" class="bi" width="24" height="24"
+            <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/user/gajjarkt" target="_blank"><img src="youtube.svg" class="bi" width="24" height="24"
                         alt=""></a></li>
-            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/gajjarrahul/"><img src="instagram.svg" class="bi" width="24" height="24"
+            <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/gajjarrahul/" target="_blank"><img src="instagram.svg" class="bi" width="24" height="24"
                         alt=""></a></li>
-            <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/rgajjar"><img src="facebook.svg" class="bi" width="24" height="24"
+            <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/rgajjar" target="_blank"><img src="facebook.svg" class="bi" width="24" height="24"
                         alt=""></a></li>
-            <li class="ms-3"><a class="text-muted" href="https://twitter.com/gajjarrahul"><img src="twitter.svg" class="bi" width="24" height="24"
+            <li class="ms-3"><a class="text-muted" href="https://twitter.com/gajjarrahul" target="_blank"><img src="twitter.svg" class="bi" width="24" height="24"
                         alt=""></a></li>
-            <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/gajjarrahul/"><img src="linkedin.svg" class="bi" width="24" height="24"
+            <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/gajjarrahul/" target="_blank"><img src="linkedin.svg" class="bi" width="24" height="24"
                         alt=""></a></li>
 
         </ul>
